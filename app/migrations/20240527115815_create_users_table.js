@@ -7,7 +7,6 @@ exports.up = function(knex) {
         table.increments('id').primary();
         table.string('name').notNullable();
         table.string('email').notNullable().unique();
-        table.enum('role',['0','1']).notNullable();
         table.string('password').notNullable();
         table.timestamps(true, true);
       });
